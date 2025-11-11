@@ -174,12 +174,12 @@ export default function Navbar() {
                 </li>
               ))}
 
-              <button
+              {/* <button
                 onClick={() => setOpenModal(true)}
                 className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full text-sm font-medium transition"
               >
                 Track Shipment
-              </button>
+              </button> */}
             </ul>
           </div>
         </nav>

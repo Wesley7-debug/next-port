@@ -32,7 +32,7 @@ export default function TrackShipmentModal({ onClose }) {
           <input
             type="text"
             placeholder="Enter Tracking ID"
-            className="w-full border border-gray-300 rounded-lg px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full border border-gray-300 rounded-lg text-black px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
 
           <button

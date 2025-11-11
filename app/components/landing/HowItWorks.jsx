@@ -68,7 +68,7 @@ export default function HowItWorksSection() {
         <div className="flex-1">
           <div className="rounded-3xl overflow-hidden shadow-lg">
             <img
-              src="https://images.unsplash.com/photo-1625045198793-4b2b0fcecc3f?auto=format&fit=crop&w=1000&q=80"
+              src="/images/home2.jpg"
               alt="Workers discussing logistics"
               className="w-full h-[400px] object-cover"
             />
