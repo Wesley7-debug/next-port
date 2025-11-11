@@ -1,61 +1,192 @@
-// import React from "react";
+// "use client";
+// import TrackShipmentModal from "../ui/TrackShipmentModal";
+// import Link from "next/link";
+// import React, { useState } from "react";
+// import { Menu, X } from "lucide-react"; // icons for open/close
+
+// const menuItems = [
+//   { title: "Home", href: "/" },
+//   { title: "About", href: "/About" },
+//   { title: "Services", href: "/Services" },
+//   { title: "Contact", href: "/Contact" },
+// ];
 
 // export default function Navbar() {
+//   const [menuOpen, setMenuOpen] = useState(false);
+//   const [openModal, setopenModal] = useState(false);
+
 //   return (
-//     <nav className="fixed top-0 w-full z-20 flex items-center justify-between px-10  backdrop-blur-md rounded-2xl  text-white">
-//       <div className="text-2xl font-bold flex items-center gap-2">
-//         <span className="bg-white text-black rounded-full px-2 py-1 text-sm">
-//           ⬤
-//         </span>
-//         NextPort
-//       </div>
-//       <ul className="hidden md:flex items-center gap-8 text-sm">
-//         <li className="hover:text-gray-300 cursor-pointer">Models</li>
-//         <li className="hover:text-gray-300 cursor-pointer">Our Mission</li>
-//         <li className="hover:text-gray-300 cursor-pointer">Careers</li>
-//         <li className="hover:text-gray-300 cursor-pointer">About us</li>
-//       </ul>
-//       <div className="flex items-center gap-4">
-//         <button className="bg-white/20 hover:bg-white/30 px-4 py-2 rounded-full">
-//           Search
-//         </button>
-//         <div className="w-8 h-8 rounded-full bg-white/30 flex items-center justify-center">
-//           ☰
+//     <>
+//       <nav className="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md shadow-sm text-black transition-all duration-300">
+//         <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+//           {/* Logo */}
+//           <div className=" text-base md:text-2xl font-bold flex items-center gap-2">
+//             <span className="bg-blue-500 text-white rounded-full px-2 py-1 text-sm">
+//               ⬤
+//             </span>
+//             TrackFreight
+//           </div>
+
+//           {/* Desktop Menu */}
+//           <ul className="hidden md:flex items-center gap-8 text-sm font-medium">
+//             {menuItems.map((item) => (
+//               <li key={item.title}>
+//                 <Link
+//                   href={item.href}
+//                   className="hover:text-blue-600 transition"
+//                 >
+//                   {item.title}
+//                 </Link>
+//               </li>
+//             ))}
+//           </ul>
+
+//           {/* Right Section */}
+//           <div className="flex items-center gap-4">
+//             <button
+//               onClick={() => setopenModal(!openModal)}
+//               className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium transition"
+//             >
+//               Track Shipment
+//             </button>
+
+//             {/* Mobile Menu Toggle */}
+//             <button
+//               onClick={() => setMenuOpen(!menuOpen)}
+//               className="md:hidden w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 hover:bg-blue-200 transition"
+//             >
+//               {menuOpen ? <X size={22} /> : <Menu size={22} />}
+//             </button>
+//           </div>
 //         </div>
-//       </div>
-//     </nav>
+
+//         {/* Mobile Menu */}
+//         <div
+//           className={`md:hidden bg-white/90 backdrop-blur-md overflow-hidden transition-all duration-300 ${
+//             menuOpen ? "h-[30vh] py-4" : "h-0 py-0"
+//           }`}
+//         >
+//           <ul className="flex flex-col items-center justify-center gap-5 text-base font-medium">
+//             {menuItems.map((item) => (
+//               <li key={item.title}>
+//                 <Link
+//                   href={item.href}
+//                   onClick={() => setMenuOpen(false)}
+//                   className="block text-gray-800 hover:text-blue-600 transition"
+//                 >
+//                   {item.title}
+//                 </Link>
+//               </li>
+//             ))}
+
+//             <button className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full text-sm font-medium transition">
+//               Track Shipment
+//             </button>
+//           </ul>
+//         </div>
+//       </nav>
+
+//       {openModal && <TrackShipmentModal onClose={() => setOpenModal(false)} />}
+//     </>
 //   );
 // }
-import React from "react";
+"use client";
+
+import TrackShipmentModal from "../ui/TrackShipmentModal";
+import Link from "next/link";
+import React, { useState } from "react";
+import { Menu, X } from "lucide-react";
+
+const menuItems = [
+  { title: "Home", href: "/" },
+  { title: "About", href: "/About" },
+  { title: "Services", href: "/Services" },
+  { title: "Contact", href: "/Contact" },
+];
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+
   return (
-    <nav className="fixed w-full top-0 z-20 flex items-center justify-between px-10 py-3 backdrop-blur-md bg-white/10 text-black">
-      {/* Logo */}
-      <div className="text-2xl font-bold flex items-center gap-2">
-        <span className="bg-black text-white rounded-full px-2 py-1 text-sm">
-          ⬤
-        </span>
-        NextPort
+    <>
+      {/* Dim background slightly when modal open */}
+      <div className={openModal ? "blur-sm transition duration-300" : ""}>
+        <nav className="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md shadow-sm text-black transition-all duration-300">
+          <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+            {/* Logo */}
+            <div className="text-base md:text-2xl font-bold flex items-center gap-2">
+              <span className="bg-blue-500 text-white rounded-full px-2 py-1 text-sm">
+                ⬤
+              </span>
+              TrackFreight
+            </div>
+
+            {/* Desktop Menu */}
+            <ul className="hidden md:flex items-center gap-8 text-sm font-medium">
+              {menuItems.map((item) => (
+                <li key={item.title}>
+                  <Link
+                    href={item.href}
+                    className="hover:text-blue-600 transition"
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            {/* Right Section */}
+            <div className="flex items-center gap-4">
+              <button
+                onClick={() => setOpenModal(true)}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium transition"
+              >
+                Track Shipment
+              </button>
+
+              {/* Mobile Menu Toggle */}
+              <button
+                onClick={() => setMenuOpen(!menuOpen)}
+                className="md:hidden w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 hover:bg-blue-200 transition"
+              >
+                {menuOpen ? <X size={22} /> : <Menu size={22} />}
+              </button>
+            </div>
+          </div>
+
+          {/* Mobile Menu */}
+          <div
+            className={`md:hidden bg-white/90 backdrop-blur-md overflow-hidden transition-all duration-300 ${
+              menuOpen ? "h-[30vh] py-4" : "h-0 py-0"
+            }`}
+          >
+            <ul className="flex flex-col items-center justify-center gap-5 text-base font-medium">
+              {menuItems.map((item) => (
+                <li key={item.title}>
+                  <Link
+                    href={item.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="block text-gray-800 hover:text-blue-600 transition"
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+
+              <button
+                onClick={() => setOpenModal(true)}
+                className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full text-sm font-medium transition"
+              >
+                Track Shipment
+              </button>
+            </ul>
+          </div>
+        </nav>
       </div>
 
-      {/* Menu Links */}
-      <ul className="hidden md:flex items-center gap-8 text-sm">
-        <li className="hover:text-gray-300 cursor-pointer">Models</li>
-        <li className="hover:text-gray-300 cursor-pointer">Our Mission</li>
-        <li className="hover:text-gray-300 cursor-pointer">Careers</li>
-        <li className="hover:text-gray-300 cursor-pointer">About us</li>
-      </ul>
-
-      {/* Search + Menu */}
-      <div className="flex items-center gap-4">
-        <button className="bg-white/20 hover:bg-white/30 px-4 py-2 rounded-full transition">
-          Search
-        </button>
-        <div className="w-8 h-8 rounded-full bg-white/30 flex items-center justify-center cursor-pointer">
-          ☰
-        </div>
-      </div>
-    </nav>
+      {/* Modal */}
+      {openModal && <TrackShipmentModal onClose={() => setOpenModal(false)} />}
+    </>
   );
 }

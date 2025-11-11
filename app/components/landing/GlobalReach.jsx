@@ -81,7 +81,7 @@ const GlobalReachSection = () => {
 
               <button
                 type="submit"
-                className="w-full bg-black text-white text-sm font-medium py-2 rounded-md hover:bg-gray-800 transition"
+                className="w-full bg-blue-500 text-white text-sm font-medium py-2 rounded-md hover:bg-gray-800 transition"
               >
                 Track Shipment{" "}
               </button>

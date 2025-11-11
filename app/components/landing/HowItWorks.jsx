@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function HowItWorksSection() {
   return (
@@ -26,7 +27,7 @@ export default function HowItWorksSection() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {/* Feature 1 */}
             <div>
-              <div className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center text-lg mb-4">
+              <div className="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center text-lg mb-4">
                 ⬤
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -41,7 +42,7 @@ export default function HowItWorksSection() {
 
             {/* Feature 2 */}
             <div>
-              <div className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center text-lg mb-4">
+              <div className="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center text-lg mb-4">
                 ↩
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -57,8 +58,8 @@ export default function HowItWorksSection() {
 
           {/* CTA Button */}
           <div className="mt-10">
-            <button className="bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-900 transition">
-              Contact Us{" "}
+            <button className="bg-blue-500 text-white px-6 py-3 rounded-full font-medium hover:bg-gray-900 transition">
+              <Link href="/Contact"> Contact Us </Link>
             </button>
           </div>
         </div>
