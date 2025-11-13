@@ -177,9 +177,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 text-sm text-white/70">
         {/* Company Info */}
         <div>
-          <h3 className="text-white font-semibold text-lg mb-2">
-            TrackFreight{" "}
-          </h3>
+          <h3 className="text-white font-semibold text-lg mb-2">OmniCargo </h3>
           <p className="max-w-sm">
             Delivering seamless, reliable, and efficient logistics solutions
             across the globe.
@@ -237,7 +235,7 @@ const Footer = () => {
 
       {/* Bottom Note */}
       <div className="max-w-6xl mx-auto mt-10 border-t border-white/10 pt-6 text-center text-white/60 text-sm">
-        © {new Date().getFullYear()} TrackFreight. All rights reserved.
+        © {new Date().getFullYear()} OmniCargo. All rights reserved.
       </div>
     </footer>
   );

@@ -120,7 +120,7 @@ export default function Navbar() {
                 <span className="bg-blue-500 text-white rounded-full px-2 py-1 text-sm">
                   ⬤
                 </span>
-                TrackFreight
+                Omnicargo{" "}
               </div>
             </Link>
 

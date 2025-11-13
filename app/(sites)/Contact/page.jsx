@@ -1,5 +1,5 @@
 import React from "react";
-import { Phone, Mail, MapPin, Send } from "lucide-react";
+import { MessageCircle, Mail, MapPin, Send } from "lucide-react";
 
 const ContactUs = () => {
   return (
@@ -32,6 +32,15 @@ const ContactUs = () => {
           </p>
 
           <div className="space-y-6">
+            <div className="flex items-center gap-4">
+              <MessageCircle className="w-6 h-6 text-blue-500" />
+              <div>
+                <p className="font-medium">Speak to</p>
+                <p className="text-gray-600">
+                  David Mice <br />
+                </p>
+              </div>
+            </div>
             {/* <div className="flex items-center gap-4">
               <Phone className="w-6 h-6 text-blue-500" />
               <div>
@@ -55,17 +64,6 @@ const ContactUs = () => {
                 </p>
               </div>
             </div>
-
-            {/* <div className="flex items-center gap-4">
-              <MapPin className="w-6 h-6 text-blue-500" />
-              <div>
-                <p className="font-medium">Office Address</p>
-                <p className="text-gray-600">
-                  123 Global Trade Ave, Suite 400 <br />
-                  New York, NY 10001
-                </p>
-              </div>
-            </div> */}
           </div>
         </div>
 

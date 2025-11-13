@@ -17,19 +17,25 @@ export default function TermsOfServicePage() {
               1. Introduction
             </h2>
             <p>
-              Welcome to TrackFreight (“TrackFreight,” “we,” “us,” or “our”).
-              These Terms of Service (“Terms”) govern your access to and use of
-              our website, digital platforms, and logistics-related services
-              (collectively, the “Services”). By using or accessing our
-              Services, you agree to comply with and be bound by these Terms. If
-              you do not agree, please do not use our Services.
+              Welcome to OmniCargo (“OmniCargo,” “we,” “our,” or “us”). These
+              Terms of Service (“Terms”) govern your access to and use of our
+              website, digital platforms, mobile applications, and all logistics
+              services (collectively, the “Services”). By accessing or using our
+              Services, you agree to be bound by these Terms and our{" "}
+              <a
+                href="/privacy"
+                className="text-cyan-700 hover:underline font-medium"
+              >
+                Privacy Policy
+              </a>
+              . If you do not agree, please discontinue use of our Services.
             </p>
             <p className="mt-3">
-              TrackFreight is a logistics and supply chain management company
-              that provides integrated solutions for transportation,
-              warehousing, and distribution. These Terms ensure that all users
-              of our Services understand their rights, obligations, and the
-              limitations of our responsibility.
+              OmniCargo is a global logistics and supply chain management
+              company providing freight forwarding, warehousing, and
+              transportation solutions. These Terms are designed to protect both
+              our customers and our business operations, ensuring transparency,
+              trust, and compliance in every engagement.
             </p>
           </section>
 
@@ -39,46 +45,50 @@ export default function TermsOfServicePage() {
               2. Eligibility
             </h2>
             <p>
-              To use our Services, you must be at least 18 years old or have
-              reached the legal age of majority in your jurisdiction. By
-              accessing or using our platform, you represent that you have the
-              authority to enter into these Terms and that all information you
-              provide is accurate, complete, and current.
+              To use OmniCargo’s Services, you must be at least 18 years of age
+              or the legal age of majority in your jurisdiction. By registering
+              or using our Services, you represent and warrant that you have the
+              authority to enter into legally binding contracts on behalf of
+              yourself or your organization, and that all information you
+              provide is truthful and up-to-date.
             </p>
           </section>
 
           {/* Modifications */}
           <section>
             <h2 className="text-2xl font-semibold text-gray-800 mb-3">
-              3. Modifications to Terms
+              3. Modifications to These Terms
             </h2>
             <p>
-              TrackFreight reserves the right to modify or update these Terms at
-              any time without prior notice. Any changes will be effective
-              immediately upon posting on our website. The updated date at the
-              top of this page indicates the latest revision. Continued use of
-              our Services after such modifications constitutes your acceptance
-              of the revised Terms.
+              OmniCargo reserves the right to modify, update, or replace any
+              part of these Terms at any time without prior notice. Any changes
+              will take effect immediately upon posting on this page. The “Last
+              updated” date above reflects the latest revision. Continued use of
+              our Services after such changes constitutes your acceptance of the
+              revised Terms.
             </p>
           </section>
 
-          {/* Services */}
+          {/* Description of Services */}
           <section>
             <h2 className="text-2xl font-semibold text-gray-800 mb-3">
               4. Description of Services
             </h2>
             <p>
-              TrackFreight offers a wide range of logistics solutions including
-              but not limited to freight forwarding, warehousing, supply chain
-              management, last-mile delivery, and digital logistics tracking.
-              The scope of our Services may vary depending on geography,
-              customer requirements, and contractual agreements.
+              OmniCargo provides a comprehensive suite of logistics and supply
+              chain services, including freight forwarding, customs clearance,
+              warehousing, route optimization, digital shipment tracking,
+              cross-border logistics, and last-mile delivery. Service
+              availability and terms may vary depending on region, partner
+              agreements, and client requirements.
             </p>
             <p className="mt-3">
-              While we strive to ensure continuous and accurate service, we do
-              not guarantee that our digital platforms will always be available,
-              error-free, or uninterrupted. Scheduled maintenance, upgrades, or
-              technical issues may temporarily affect accessibility.
+              While we strive to provide uninterrupted, secure, and
+              high-performance digital platforms, OmniCargo does not guarantee
+              that the Services will be error-free, continuously available, or
+              completely secure at all times. Scheduled maintenance, network
+              failures, or unforeseen circumstances may temporarily limit
+              access.
             </p>
           </section>
 
@@ -88,82 +98,89 @@ export default function TermsOfServicePage() {
               5. User Responsibilities
             </h2>
             <p>
-              Users agree to use our Services only for lawful purposes and in
-              accordance with these Terms. You shall not:
+              You agree to use OmniCargo’s Services only for lawful and ethical
+              purposes in accordance with these Terms and all applicable laws
+              and regulations. You must not:
             </p>
             <ul className="list-disc list-inside mt-2 space-y-2">
               <li>
-                Use the Services to transmit unlawful, misleading, or harmful
-                content.
+                Upload or transmit harmful, fraudulent, or misleading content.
               </li>
               <li>
-                Attempt to gain unauthorized access to our systems or networks.
+                Attempt to hack, disrupt, or gain unauthorized access to our
+                systems, networks, or data.
               </li>
               <li>
-                Interfere with the functionality or security of the Services.
+                Use the Services to send spam, malware, or any form of
+                unauthorized communications.
               </li>
               <li>
-                Use our intellectual property without express written consent.
+                Misuse or infringe on OmniCargo’s intellectual property rights.
               </li>
             </ul>
             <p className="mt-3">
               You are responsible for maintaining the confidentiality of your
-              account credentials and for all activities that occur under your
-              account. If you believe your account has been compromised, please
-              notify us immediately.
+              account credentials. If you believe your account has been
+              compromised, you must notify us immediately.
             </p>
           </section>
 
           {/* Intellectual Property */}
           <section>
             <h2 className="text-2xl font-semibold text-gray-800 mb-3">
-              6. Intellectual Property
+              6. Intellectual Property Rights
             </h2>
             <p>
-              All content, materials, designs, trademarks, and intellectual
-              property appearing on TrackFreight’s platforms are the exclusive
-              property of TrackFreight or its licensors. You are granted a
-              limited, non-exclusive, non-transferable license to access and use
-              our Services solely for business or personal purposes in
-              accordance with these Terms.
+              All trademarks, content, graphics, designs, software, and
+              intellectual property appearing on OmniCargo’s websites and
+              applications are the exclusive property of OmniCargo or its
+              licensors. You are granted a limited, revocable, non-transferable
+              license to access and use the Services for personal or commercial
+              logistics purposes.
             </p>
             <p className="mt-3">
-              You may not reproduce, distribute, or modify any portion of our
-              Services without prior written authorization from TrackFreight.
+              You may not copy, reproduce, distribute, or modify any content
+              without prior written consent from OmniCargo.
             </p>
           </section>
 
-          {/* Privacy */}
+          {/* Privacy Policy */}
           <section>
             <h2 className="text-2xl font-semibold text-gray-800 mb-3">
-              7. Privacy Policy
+              7. Privacy and Data Protection
             </h2>
             <p>
-              Your privacy is important to us. Our collection and use of
-              personal information are governed by our{" "}
+              OmniCargo values your privacy. Your use of our Services is also
+              governed by our{" "}
               <a
                 href="/privacy"
                 className="text-cyan-700 hover:underline font-medium"
               >
                 Privacy Policy
               </a>
-              , which forms part of these Terms. By using our Services, you
-              consent to the collection and processing of your information as
-              described therein.
+              , which explains how we collect, use, and protect your personal
+              information. By using our Services, you consent to the collection
+              and processing of your data as outlined in our Privacy Policy and
+              in compliance with applicable laws such as GDPR and CCPA.
             </p>
           </section>
 
-          {/* Payment & Billing */}
+          {/* Payments */}
           <section>
             <h2 className="text-2xl font-semibold text-gray-800 mb-3">
-              8. Payment and Billing
+              8. Payment and Billing Terms
             </h2>
             <p>
-              Certain Services may require payment. All fees, charges, and
-              payment terms will be outlined in your service agreement or order
-              confirmation. Unless otherwise stated, payments are due upon
-              receipt and are non-refundable. Failure to make payments on time
-              may result in service suspension or termination.
+              Some of OmniCargo’s Services may require payment. All fees and
+              charges are due according to the terms specified in your service
+              contract or invoice. Unless otherwise stated, payments are
+              non-refundable once processed. Failure to make timely payments may
+              result in account suspension or termination of Services.
+            </p>
+            <p className="mt-3">
+              You agree to provide accurate billing information and authorize
+              OmniCargo to charge your chosen payment method for any fees due.
+              All prices are listed in U.S. dollars unless otherwise stated.
             </p>
           </section>
 
@@ -173,16 +190,17 @@ export default function TermsOfServicePage() {
               9. Limitation of Liability
             </h2>
             <p>
-              To the fullest extent permitted by law, TrackFreight, its
-              affiliates, and employees shall not be liable for any direct,
-              indirect, incidental, or consequential damages arising from your
-              use of or inability to use our Services, including but not limited
+              To the fullest extent permitted by law, OmniCargo, its affiliates,
+              directors, and employees are not liable for any indirect,
+              incidental, special, or consequential damages resulting from your
+              use of or inability to use the Services, including but not limited
               to loss of profits, data, or business opportunities.
             </p>
             <p className="mt-3">
-              We make no warranties, express or implied, regarding the accuracy,
-              reliability, or completeness of any information provided through
-              our Services. Your use of the Services is at your own risk.
+              OmniCargo does not guarantee the completeness or accuracy of
+              third-party content and is not responsible for delays caused by
+              external carriers, customs processes, or force majeure events such
+              as natural disasters, strikes, or governmental actions.
             </p>
           </section>
 
@@ -192,29 +210,30 @@ export default function TermsOfServicePage() {
               10. Indemnification
             </h2>
             <p>
-              You agree to indemnify, defend, and hold harmless TrackFreight,
-              its officers, directors, employees, and partners from and against
-              any claims, damages, liabilities, losses, or expenses (including
-              legal fees) arising from your violation of these Terms or misuse
-              of our Services.
+              You agree to indemnify, defend, and hold harmless OmniCargo, its
+              officers, employees, and partners from and against all claims,
+              damages, liabilities, costs, and expenses (including legal fees)
+              arising from your use of the Services, violation of these Terms,
+              or infringement of any third-party rights.
             </p>
           </section>
 
           {/* Termination */}
           <section>
             <h2 className="text-2xl font-semibold text-gray-800 mb-3">
-              11. Termination
+              11. Suspension and Termination
             </h2>
             <p>
-              TrackFreight reserves the right to suspend or terminate your
-              access to our Services at any time, with or without cause or
-              notice, particularly in cases of suspected fraud, violation of
-              these Terms, or unlawful behavior.
+              OmniCargo reserves the right to suspend or terminate your access
+              to our Services at any time without prior notice if you violate
+              these Terms, engage in fraudulent activity, or pose a risk to our
+              systems or reputation.
             </p>
             <p className="mt-3">
-              Upon termination, your right to use the Services will immediately
-              cease, but any obligations or liabilities incurred prior to
-              termination shall survive.
+              Upon termination, your right to use the Services ceases
+              immediately. Any obligations or liabilities incurred prior to
+              termination shall survive, including payment obligations and
+              indemnity clauses.
             </p>
           </section>
 
@@ -224,30 +243,30 @@ export default function TermsOfServicePage() {
               12. Governing Law and Dispute Resolution
             </h2>
             <p>
-              These Terms shall be governed by and construed in accordance with
-              the laws of the Republic of Korea, without regard to conflict of
-              law principles. Any disputes arising under or in connection with
-              these Terms shall be resolved through good faith negotiations. If
-              not resolved, disputes will be submitted to the competent courts
-              located in Seoul, South Korea.
+              These Terms are governed by the laws of the United States and the
+              State of New York, without regard to its conflict of law
+              principles. Any dispute shall first be attempted to be resolved
+              through good-faith negotiation. If unresolved, disputes shall be
+              subject to the exclusive jurisdiction of the state and federal
+              courts located in New York, NY.
             </p>
           </section>
 
           {/* Miscellaneous */}
           <section>
             <h2 className="text-2xl font-semibold text-gray-800 mb-3">
-              13. Miscellaneous
+              13. Miscellaneous Provisions
             </h2>
             <p>
-              If any provision of these Terms is found to be invalid or
-              unenforceable, the remaining provisions shall continue in full
-              force and effect. Our failure to enforce any right or provision
-              shall not constitute a waiver of such right or provision.
+              If any provision of these Terms is found invalid or unenforceable,
+              the remaining provisions shall continue in full effect. Our
+              failure to enforce any right or clause shall not constitute a
+              waiver of such right or clause.
             </p>
             <p className="mt-3">
-              These Terms constitute the entire agreement between you and
-              TrackFreight regarding your use of the Services and supersede any
-              prior agreements or understandings.
+              These Terms, together with our Privacy Policy, constitute the
+              entire agreement between you and OmniCargo regarding your use of
+              the Services and supersede all prior agreements or understandings.
             </p>
           </section>
 
@@ -256,12 +275,16 @@ export default function TermsOfServicePage() {
             <h2 className="text-2xl font-semibold text-gray-800 mb-3">
               14. Contact Us
             </h2>
-            <p>For questions about these Terms, please contact us at:</p>
+            <p>
+              For any questions, concerns, or legal inquiries regarding these
+              Terms of Service, please contact:
+            </p>
             <div className="mt-4 bg-white border border-gray-200 rounded-lg p-4">
-              <p className="font-medium text-gray-800">TrackFreight</p>
-              123 Global Chibiak Ave, Suite 400 <br />
-              New York, NY.
-              <p>Email: trackfreightlogistics@gmail.com</p>
+              <p className="font-medium text-gray-800">OmniCargo Logistics</p>
+              <p>123 Global Commerce Blvd, Suite 400</p>
+              <p>New York, NY, USA</p>
+              <p>Email: legal@omnicargo.com</p>
+              {/* <p>Phone: +1 (800) 555-0123</p> */}
             </div>
           </section>
         </div>
