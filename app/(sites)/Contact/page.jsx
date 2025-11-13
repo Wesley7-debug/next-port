@@ -28,29 +28,35 @@ const ContactUs = () => {
           </h2>
           <p className="text-gray-600 mb-8 max-w-md">
             Whether you have a question about our logistics services, shipment
-            tracking, or want to get a quote — our team is ready to help.
+            tracking, or want to get a quote our team is ready to help.
           </p>
 
           <div className="space-y-6">
-            <div className="flex items-center gap-4">
+            {/* <div className="flex items-center gap-4">
               <Phone className="w-6 h-6 text-blue-500" />
               <div>
                 <p className="font-medium">Call Us</p>
                 <p className="text-gray-600">+1 (800) 456-7890</p>
                 <p className="text-gray-600">+1 (800) 987-6543</p>
               </div>
-            </div>
+            </div> */}
 
             <div className="flex items-center gap-4">
               <Mail className="w-6 h-6 text-blue-500" />
               <div>
                 <p className="font-medium">Email</p>
-                <p className="text-gray-600">support@fastlogistics.com</p>
-                <p className="text-gray-600">info@fastlogistics.com</p>
+                <p className="text-gray-600">
+                  {" "}
+                  trackfreightlogistics@gmail.com
+                </p>
+                <p className="text-gray-600">
+                  {" "}
+                  trackfreightlogistics@gmail.com
+                </p>
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
+            {/* <div className="flex items-center gap-4">
               <MapPin className="w-6 h-6 text-blue-500" />
               <div>
                 <p className="font-medium">Office Address</p>
@@ -59,7 +65,7 @@ const ContactUs = () => {
                   New York, NY 10001
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 

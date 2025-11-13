@@ -2,33 +2,33 @@ import React from "react";
 
 const testimonials = [
   {
-    text: "No matter how many tools you change, you can keep Tines in place.",
-    company: "Intercom",
+    text: "TrackFreight Logistics has completely transformed how we manage our freight shipments faster, clearer, and more reliable than ever.",
+    company: "SwiftLine Imports",
     bg: "bg-blue-100",
   },
   {
-    text: "My favorite thing about Tines is how easy and user-friendly it is. It feels like a game — whenever I build in Tines, I feel like I'm solving a fun puzzle.",
-    company: "GitLab",
+    text: "Working with TrackFreight feels effortless. The platform is user-friendly, transparent, and makes tracking shipments feel like second nature.",
+    company: "Northway Trading Co.",
     bg: "bg-orange-100",
   },
   {
-    text: "750 days of work time saved.",
-    company: "Elastic",
+    text: "We’ve saved over 700 hours a year in manual coordination since switching to TrackFreight.",
+    company: "LogiCore Distribution",
     bg: "bg-purple-100",
   },
   {
-    text: "Tines is not only great for cybersecurity teams who are likely already undersized and drowning in alerts, but also for the business at large.",
-    company: "James K., Senior Manager, InfoSec",
+    text: "TrackFreight isn’t just a logistics company  they’re a true partner. Their team goes above and beyond to ensure our freight moves smoothly worldwide.",
+    company: "James K., Supply Chain Manager",
     bg: "bg-green-100",
   },
   {
-    text: "The platform has played a pivotal role in helping us achieve our vision of a 24/7 SOC — ensuring alerts are streamlined and no critical notifications are missed.",
-    company: "Ajinkya Y., Cyber Analyst",
+    text: "The 24/7 tracking and instant updates have been game-changing for our operations. We never miss a delivery milestone anymore.",
+    company: "Ajinkya Y., Operations Director",
     bg: "bg-yellow-100",
   },
   {
-    text: "Process time per alert reduced from 30s to 5s.",
-    company: "Customer Case Study",
+    text: "Our average delivery coordination time dropped from 30 minutes to 5 minutes with TrackFreight’s platform.",
+    company: "FreightWave Partners",
     bg: "bg-pink-100",
   },
 ];
