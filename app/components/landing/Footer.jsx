@@ -188,7 +188,7 @@ const Footer = () => {
               href="mailto:trackfreightlogistics@gmail.com"
               className="underline"
             >
-              trackfreightlogistics@gmail.com
+              carelineomincargo@gmail.com{" "}
             </a>
           </p>
         </div>

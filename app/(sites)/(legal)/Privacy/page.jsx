@@ -8,7 +8,7 @@ export default function PrivacyPolicyPage() {
         <h1 className="text-4xl font-bold text-cyan-700 mb-6">
           Privacy Policy
         </h1>
-        <p className="text-gray-600 mb-12">Last updated: November 11, 2025</p>
+        <p className="text-gray-600 mb-12">Last updated: November 11, 2024</p>
 
         <div className="space-y-10">
           {/* Introduction */}
@@ -128,7 +128,7 @@ export default function PrivacyPolicyPage() {
                 href="mailto:privacy@omnicargo.com"
                 className="text-cyan-700 hover:underline font-medium"
               >
-                privacy@omnicargo.com
+                carelineomincargo@gmail.com{" "}
               </a>
               .
             </p>
@@ -161,7 +161,7 @@ export default function PrivacyPolicyPage() {
               <p className="font-medium text-gray-800">OmniCargo Logistics</p>
               <p>123 Global Commerce Blvd, Suite 400</p>
               <p>New York, NY, USA</p>
-              <p>Email: privacy@omnicargo.com</p>
+              <p>Email: carelineomincargo@gmail.com</p>
               <p>Phone: +1 (800) 555-0123</p>
             </div>
           </section>

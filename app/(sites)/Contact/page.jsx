@@ -1,5 +1,6 @@
 import React from "react";
 import { MessageCircle, Mail, MapPin, Send } from "lucide-react";
+import ContactForm from "@/app/components/ui/ContactForm";
 
 const ContactUs = () => {
   return (
@@ -37,7 +38,7 @@ const ContactUs = () => {
               <div>
                 <p className="font-medium">Speak to</p>
                 <p className="text-gray-600">
-                  David Mice <br />
+                  David Mile <br />
                 </p>
               </div>
             </div>
@@ -54,21 +55,15 @@ const ContactUs = () => {
               <Mail className="w-6 h-6 text-blue-500" />
               <div>
                 <p className="font-medium">Email</p>
-                <p className="text-gray-600">
-                  {" "}
-                  trackfreightlogistics@gmail.com
-                </p>
-                <p className="text-gray-600">
-                  {" "}
-                  trackfreightlogistics@gmail.com
-                </p>
+                <p className="text-gray-600"> carelineomincargo@gmail.com </p>
+                <p className="text-gray-600"> carelineomincargo@gmail.com </p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Right: Contact Form */}
-        <div>
+        {/* <div>
           <h3 className="text-2xl font-semibold mb-6">Send us a message</h3>
           <form className="bg-white shadow-md rounded-xl p-8 space-y-6">
             <div>
@@ -112,7 +107,8 @@ const ContactUs = () => {
               Send Message
             </button>
           </form>
-        </div>
+        </div> */}
+        <ContactForm />
       </section>
 
       {/* Map Section */}
