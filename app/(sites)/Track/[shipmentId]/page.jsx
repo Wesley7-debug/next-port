@@ -340,15 +340,15 @@ const TrackShipmentPage = () => {
             <p className="mt-2 font-semibold text-gray-800">Quantity</p>
             <p className="text-gray-600">{shipment.quantity}</p>
 
-            <p className="mt-2 font-semibold text-gray-800">Weight (kg)</p>
-            <p className="text-gray-600">{shipment.weight}</p>
+            {/* <p className="mt-2 font-semibold text-gray-800">Weight (kg)</p>
+            <p className="text-gray-600">{shipment.weight}</p> */}
           </div>
           <div>
-            <p className="font-semibold text-gray-800">Dimensions (L×W×H cm)</p>
+            {/* <p className="font-semibold text-gray-800">Dimensions (L×W×H cm)</p>
             <p className="text-gray-600">
               {shipment.dimensions?.length} × {shipment.dimensions?.width} ×{" "}
               {shipment.dimensions?.height}
-            </p>
+            </p> */}
 
             <p className="mt-2 font-semibold text-gray-800">Service Type</p>
             <p className="text-gray-600">{shipment.serviceType}</p>
