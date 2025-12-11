@@ -1,18 +1,3 @@
-// import mongoose from "mongoose";
-
-// const ShipmentSchema = new mongoose.Schema({
-//   shipmentId: { type: String, required: true, unique: true },
-//   name: { type: String, required: true },
-//   email: { type: String, required: true },
-//   from: { type: String, required: true },
-//   to: { type: String, required: true },
-//   departed: { type: Date, required: true },
-//   expected: { type: Date, required: true },
-//   status: { type: String, default: "Active" }, // Added status field
-// });
-
-// export default mongoose.models.Shipment ||
-//   mongoose.model("Shipment", ShipmentSchema);
 import mongoose from "mongoose";
 
 const ShipmentSchema = new mongoose.Schema({
@@ -42,7 +27,7 @@ const ShipmentSchema = new mongoose.Schema({
     default: "Transit",
   },
 
-  // ⭐ Top 10 Added Fields
+  // ⭐ Package info
   quantity: { type: Number, default: 1 },
   weight: { type: Number, default: 0 },
   dimensions: {
@@ -59,6 +44,18 @@ const ShipmentSchema = new mongoose.Schema({
 
   lastUpdated: { type: Date, default: Date.now },
   notes: { type: String, default: "" },
+
+  // ⭐ Full long info
+  shipperInfo: { type: String, default: "" }, // full paragraph
+  receiverInfo: { type: String, default: "" }, // full paragraph
+
+  // ⭐ New fields for payment, shipment type, pickup, carrier, and comments
+  paymentMethod: { type: String, default: "card" },
+  totalFreight: { type: Number, default: 0 },
+  pickupDateTime: { type: Date },
+  comments: { type: String, default: "" },
+  shipmentType: { type: String, default: "Standard" },
+  carrierReference: { type: String, default: "" }, // tracking ID
 });
 
 export default mongoose.models.Shipment ||
