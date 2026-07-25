@@ -66,7 +66,6 @@ const Shipment =
 
 async function seed() {
   await mongoose.connect(MONGODB_URL);
-  console.log("Connected to MongoDB");
 
   // Delete existing if present
   await Shipment.deleteOne({ shipmentId: "OMC-2026-84721" });
@@ -195,9 +194,9 @@ async function seed() {
     ],
   });
 
-  console.log("Seeded shipment:", doc.shipmentId);
+  process.stdout.write("Seeded shipment: " + doc.shipmentId + "\n");
   await mongoose.disconnect();
-  console.log("Done!");
+  process.stdout.write("Done!\n");
 }
 
 seed().catch((err) => {

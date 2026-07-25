@@ -10,25 +10,65 @@ export async function POST(req) {
 
     const body = await req.json();
     const {
-      shipmentId, name, email, from, to, departed, expected,
-      shipperInfo, receiverInfo, quantity, weight, dimensions,
-      packageType, serviceType, originHub, destinationHub, notes,
-      paymentMethod, totalFreight, pickupDateTime, comments,
-      shipmentType, carrierReference, status,
-      origin, currentLocation, destination,
-      trackingEvents, delayReason, exceptionDetails, isDelayed,
-      shipper, receiver, documents,
+      shipmentId,
+      name,
+      email,
+      from,
+      to,
+      departed,
+      expected,
+      shipperInfo,
+      receiverInfo,
+      quantity,
+      weight,
+      dimensions,
+      packageType,
+      serviceType,
+      originHub,
+      destinationHub,
+      notes,
+      paymentMethod,
+      totalFreight,
+      pickupDateTime,
+      comments,
+      shipmentType,
+      carrierReference,
+      status,
+      origin,
+      currentLocation,
+      destination,
+      trackingEvents,
+      delayReason,
+      exceptionDetails,
+      isDelayed,
+      shipper,
+      receiver,
+      documents,
     } = body;
 
-    if (!shipmentId || !name || !email || !from || !to || !departed || !expected) {
+    if (
+      !shipmentId ||
+      !name ||
+      !email ||
+      !from ||
+      !to ||
+      !departed ||
+      !expected
+    ) {
       return new Response(
         JSON.stringify({ error: "All required fields must be provided" }),
-        { status: 400 }
+        { status: 400 },
       );
     }
 
     const shipmentData = {
-      shipmentId, name, email, from, to, departed, expected,
+      shipmentId,
+      name,
+      email,
+      from,
+      to,
+      departed,
+      expected,
       status: status || "Pending",
       shipperInfo: shipperInfo || "",
       receiverInfo: receiverInfo || "",
@@ -47,7 +87,11 @@ export async function POST(req) {
       shipmentType: shipmentType || "Standard",
       carrierReference: carrierReference || "",
       origin: origin || { name: "", latitude: null, longitude: null },
-      currentLocation: currentLocation || { name: "", latitude: null, longitude: null },
+      currentLocation: currentLocation || {
+        name: "",
+        latitude: null,
+        longitude: null,
+      },
       destination: destination || { name: "", latitude: null, longitude: null },
       trackingEvents: trackingEvents || [],
       delayReason: delayReason || "",
@@ -63,8 +107,9 @@ export async function POST(req) {
     return new Response(JSON.stringify(newShipment), { status: 201 });
   } catch (err) {
     if (err instanceof Response) throw err;
-    console.error(err);
-    return new Response(JSON.stringify({ error: "Failed to add shipment" }), { status: 500 });
+    return new Response(JSON.stringify({ error: "Failed to add shipment" }), {
+      status: 500,
+    });
   }
 }
 
@@ -74,10 +119,15 @@ export async function GET() {
     await requireAdminAuth();
     await connectDB();
     const shipments = await Shipment.find({}).sort({ lastUpdated: -1 });
-    return new Response(JSON.stringify(shipments), { status: 200, headers: { "Content-Type": "application/json" } });
+    return new Response(JSON.stringify(shipments), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
   } catch (err) {
     if (err instanceof Response) throw err;
-    console.error(err);
-    return new Response(JSON.stringify({ error: "Failed to fetch shipments" }), { status: 500 });
+    return new Response(
+      JSON.stringify({ error: "Failed to fetch shipments" }),
+      { status: 500 },
+    );
   }
 }

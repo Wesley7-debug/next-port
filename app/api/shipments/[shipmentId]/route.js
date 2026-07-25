@@ -29,7 +29,6 @@ export async function GET(req, { params }) {
       headers: { "Content-Type": "application/json" },
     });
   } catch (err) {
-    console.error(err);
     return new Response(JSON.stringify({ error: "Server error" }), {
       status: 500,
       headers: { "Content-Type": "application/json" },
@@ -101,7 +100,6 @@ export async function PUT(req, { params }) {
     );
   } catch (err) {
     if (err instanceof Response) throw err;
-    console.error(err);
     return new Response(JSON.stringify({ error: "Server error" }), {
       status: 500,
       headers: { "Content-Type": "application/json" },
@@ -140,7 +138,6 @@ export async function DELETE(req, { params }) {
     });
   } catch (err) {
     if (err instanceof Response) throw err;
-    console.error(err);
     return new Response(JSON.stringify({ error: "Server error" }), {
       status: 500,
       headers: { "Content-Type": "application/json" },

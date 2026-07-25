@@ -14,17 +14,16 @@ export default function ContactForm() {
         "service_g9c1t1u",
         "template_1pmwlnp",
         formRef.current,
-        "Rl3QYtQktGB6pb7cw"
+        "Rl3QYtQktGB6pb7cw",
       )
       .then(
         () => {
           alert("Message sent successfully!");
           formRef.current.reset();
         },
-        (error) => {
-          console.error("EmailJS Error:", error);
+        () => {
           alert("Failed to send message. Try again.");
-        }
+        },
       );
   };
 

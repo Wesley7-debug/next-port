@@ -6,13 +6,14 @@ const bcrypt = require("bcryptjs");
 const password = process.argv[2];
 
 if (!password) {
-  console.log("Usage: node scripts/hash-password.js <password>");
-  console.log("Example: node scripts/hash-password.js mySecureAdminPass123");
+  process.stderr.write("Usage: node scripts/hash-password.js <password>\n");
   process.exit(1);
 }
 
 const hash = bcrypt.hashSync(password, 10);
-console.log("\nAdd this to your .env.local file:\n");
-console.log("ADMIN_PASSWORD_HASH=" + hash);
-console.log("\nAuthorized Admin Emails:");
-console.log("ADMIN_EMAILS=admin@omnicargo.com,omnicargo.admin@gmail.com\n");
+process.stdout.write("\nAdd this to your .env.local file:\n\n");
+process.stdout.write("ADMIN_PASSWORD_HASH=" + hash + "\n");
+process.stdout.write("\nAuthorized Admin Emails:\n");
+process.stdout.write(
+  "ADMIN_EMAILS=admin@omnicargo.com,omnicargo.admin@gmail.com\n\n",
+);

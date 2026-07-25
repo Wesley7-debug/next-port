@@ -134,7 +134,6 @@ export default function AdminDashboard() {
       const data = await res.json();
       setShipments(data);
     } catch (err) {
-      console.error(err);
     } finally {
       setLoading(false);
     }
