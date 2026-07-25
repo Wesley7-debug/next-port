@@ -112,7 +112,7 @@ export default function Navbar() {
     <>
       {/* Dim background slightly when modal open */}
       <div className={openModal ? "blur-sm transition duration-300" : ""}>
-        <nav className="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md shadow-sm text-black transition-all duration-300">
+        <nav className="fixed top-0 left-0 w-full z-999 bg-white/70 backdrop-blur-md shadow-sm text-black transition-all duration-300">
           <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
             {/* Logo */}
             <Link href="/">
