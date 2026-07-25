@@ -383,6 +383,36 @@ export default function EditShipmentModal({ shipment, onClose, onUpdate }) {
               </Field>
             </div>
           </Section>
+
+          {/* Notes & Comments */}
+          <Section title="Notes & Comments">
+            <div className="space-y-3">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Notes
+                </label>
+                <textarea
+                  value={form.notes || ""}
+                  onChange={(e) => updateField("notes", e.target.value)}
+                  rows={3}
+                  className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-900"
+                  placeholder="Internal notes..."
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Comments
+                </label>
+                <textarea
+                  value={form.comments || ""}
+                  onChange={(e) => updateField("comments", e.target.value)}
+                  rows={3}
+                  className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-900"
+                  placeholder="Customer-facing comments..."
+                />
+              </div>
+            </div>
+          </Section>
         </div>
 
         <div className="sticky bottom-0 bg-white border-t px-6 py-4 flex justify-end gap-3">
