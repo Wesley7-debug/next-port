@@ -65,17 +65,83 @@ export default function ShipmentSummaryHeader({ shipment }) {
   const getScheduleStatus = () => {
     const s = shipment.status;
     switch (s) {
-      case "Pending":       return { label: "Awaiting Pickup", color: "text-gray-500", dot: "bg-gray-400", blink: false };
-      case "Picked Up":    return { label: "Processing", color: "text-lime-600", dot: "bg-lime-500", blink: true };
-      case "Transit":      return { label: "Active", color: "text-green-600", dot: "bg-green-500", blink: true };
-      case "Customs Clearance": return { label: "In Clearance", color: "text-cyan-600", dot: "bg-cyan-500", blink: true };
-      case "Hold":         return { label: "On Hold", color: "text-amber-600", dot: "bg-amber-500", blink: false };
-      case "Delayed":      return { label: "Delayed", color: "text-orange-600", dot: "bg-orange-500", blink: true };
-      case "Out for Delivery": return { label: "Out for Delivery", color: "text-indigo-600", dot: "bg-indigo-500", blink: true };
-      case "Delivered":    return { label: "Delivered", color: "text-green-600", dot: "bg-green-500", blink: false };
-      case "Cancelled":    return { label: "Cancelled", color: "text-red-600", dot: "bg-red-500", blink: false };
-      case "Returned":     return { label: "Returned", color: "text-purple-600", dot: "bg-purple-500", blink: false };
-      default:             return { label: "On Schedule", color: "text-green-600", dot: "bg-green-500", blink: true };
+      case "Pending":
+        return {
+          label: "Awaiting Pickup",
+          color: "text-gray-500",
+          dot: "bg-gray-400",
+          blink: false,
+        };
+      case "Picked Up":
+        return {
+          label: "Processing",
+          color: "text-lime-600",
+          dot: "bg-lime-500",
+          blink: true,
+        };
+      case "Transit":
+        return {
+          label: "Active",
+          color: "text-green-600",
+          dot: "bg-green-500",
+          blink: true,
+        };
+      case "Customs Clearance":
+        return {
+          label: "In Clearance",
+          color: "text-cyan-600",
+          dot: "bg-cyan-500",
+          blink: true,
+        };
+      case "Hold":
+        return {
+          label: "On Hold",
+          color: "text-amber-600",
+          dot: "bg-amber-500",
+          blink: false,
+        };
+      case "Delayed":
+        return {
+          label: "Delayed",
+          color: "text-orange-600",
+          dot: "bg-orange-500",
+          blink: true,
+        };
+      case "Out for Delivery":
+        return {
+          label: "Out for Delivery",
+          color: "text-indigo-600",
+          dot: "bg-indigo-500",
+          blink: true,
+        };
+      case "Delivered":
+        return {
+          label: "Delivered",
+          color: "text-green-600",
+          dot: "bg-green-500",
+          blink: false,
+        };
+      case "Cancelled":
+        return {
+          label: "Cancelled",
+          color: "text-red-600",
+          dot: "bg-red-500",
+          blink: false,
+        };
+      case "Returned":
+        return {
+          label: "Returned",
+          color: "text-purple-600",
+          dot: "bg-purple-500",
+          blink: false,
+        };
+      default:
+        return {
+          label: "On Schedule",
+          color: "text-green-600",
+          dot: "bg-green-500",
+          blink: true,
+        };
     }
   };
 
@@ -202,7 +268,9 @@ export default function ShipmentSummaryHeader({ shipment }) {
               <CheckCircle2 size={14} /> Delivery Status
             </div>
             <div className="flex items-center gap-2">
-              <span className={`inline-block w-2.5 h-2.5 rounded-full ${scheduleInfo.dot} ${scheduleInfo.blink ? "animate-pulse" : ""}`}></span>
+              <span
+                className={`inline-block w-2.5 h-2.5 rounded-full ${scheduleInfo.dot} ${scheduleInfo.blink ? "animate-pulse" : ""}`}
+              ></span>
               <p className={`font-semibold text-sm ${scheduleInfo.color}`}>
                 {scheduleInfo.label}
               </p>
