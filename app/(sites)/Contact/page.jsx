@@ -55,8 +55,14 @@ const ContactUs = () => {
               <Mail className="w-6 h-6 text-blue-500" />
               <div>
                 <p className="font-medium">Email</p>
-                <p className="text-gray-600"> carelineomincargo@gmail.com </p>
-                <p className="text-gray-600"> carelineomincargo@gmail.com </p>
+                <p className="text-gray-600">
+                  {" "}
+                  omnicargo.customercare@gmail.com{" "}
+                </p>
+                <p className="text-gray-600">
+                  {" "}
+                  omnicargo.customercare@gmail.com{" "}
+                </p>
               </div>
             </div>
           </div>

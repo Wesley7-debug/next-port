@@ -1,4 +1,7 @@
+"use client";
+
 import { Geist, Geist_Mono } from "next/font/google";
+import { usePathname } from "next/navigation";
 import "./globals.css";
 import Navbar from "./components/landing/Navbar";
 import Footer from "./components/landing/Footer";
@@ -13,20 +16,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Omnicargo",
-  description: "A logistic site",
-};
-
 export default function RootLayout({ children }) {
+  const pathname = usePathname();
+  const isAdmin = pathname?.startsWith("/Admin");
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
+        {!isAdmin && <Navbar />}
         {children}
-        <Footer />
+        {!isAdmin && <Footer />}
       </body>
     </html>
   );

@@ -283,7 +283,7 @@ export default function TermsOfServicePage() {
               <p className="font-medium text-gray-800">OmniCargo Logistics</p>
               <p>123 Global Commerce Blvd, Suite 400</p>
               <p>New York, NY, USA</p>
-              <p>Email: carelineomincargo@gmail.com</p>
+              <p>Email: omnicargo.customercare@gmail.com</p>
               {/* <p>Phone: +1 (800) 555-0123</p> */}
             </div>
           </section>

@@ -128,7 +128,7 @@ export default function PrivacyPolicyPage() {
                 href="mailto:privacy@omnicargo.com"
                 className="text-cyan-700 hover:underline font-medium"
               >
-                carelineomincargo@gmail.com{" "}
+                omnicargo.customercare@gmail.com{" "}
               </a>
               .
             </p>

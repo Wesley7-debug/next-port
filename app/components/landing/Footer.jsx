@@ -185,10 +185,10 @@ const Footer = () => {
           <p className="mt-4 text-white/60">
             Email:{" "}
             <a
-              href="mailto:trackfreightlogistics@gmail.com"
+              href="mailto:omnicargo.customercare@gmail.com"
               className="underline"
             >
-              carelineomincargo@gmail.com{" "}
+              omnicargo.customercare@gmail.com
             </a>
           </p>
         </div>

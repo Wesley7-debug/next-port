@@ -49,10 +49,10 @@ export default function HeroSection() {
               <h3 className="text-xl font-semibold mb-2">
                 Delivery Revolution
               </h3>
-              <p className="text-gray-500 text-sm mb-2">Your way in 2025</p>
+              <p className="text-gray-500 text-sm mb-2">Your way in 2026</p>
               <div className="text-gray-700 text-sm flex justify-between">
                 <span>11:10</span>
-                <span>09.04.2025</span>
+                <span>09.04.2026</span>
               </div>
             </div>
           </div>
