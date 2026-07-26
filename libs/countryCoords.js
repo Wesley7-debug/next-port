@@ -36,6 +36,10 @@ const COUNTRIES = {
   tokyo: [35.6762, 139.6503],
   brazil: [-14.235, -51.9253],
   "sao paulo": [-23.5505, -46.6333],
+  "ribeirao pires": [-23.7105, -46.4135],
+  "ribeirão pires": [-23.7105, -46.4135],
+  "rio de janeiro": [-22.9068, -43.1729],
+  brasilia: [-15.8267, -47.9218],
   "south africa": [-30.5595, 22.9375],
   johannesburg: [-26.2041, 28.0473],
   "cape town": [-33.9249, 18.4241],
@@ -131,9 +135,12 @@ export function getCoordinates(countryName) {
     if (name === key) return { latitude: coords[0], longitude: coords[1] };
   }
 
-  // Partial match
+  // Word-boundary partial match (only match whole words from the key)
+  const words = name.split(/[\s,.-]+/).filter((w) => w.length > 2);
   for (const [key, coords] of Object.entries(COUNTRIES)) {
-    if (name.includes(key) || key.includes(name)) {
+    const keyWords = key.split(/\s+/);
+    // If ALL words of the key appear in the search name
+    if (keyWords.every((kw) => name.includes(kw))) {
       return { latitude: coords[0], longitude: coords[1] };
     }
   }

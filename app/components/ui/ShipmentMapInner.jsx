@@ -50,33 +50,48 @@ const destIcon = new L.Icon({
 });
 
 export default function ShipmentMapInner({ shipment }) {
-  const oLat = shipment?.origin?.latitude;
-  const oLng = shipment?.origin?.longitude;
-  const cLat = shipment?.currentLocation?.latitude;
-  const cLng = shipment?.currentLocation?.longitude;
-  const dLat = shipment?.destination?.latitude;
-  const dLng = shipment?.destination?.longitude;
+  const isValidCoord = (lat, lng) =>
+    typeof lat === "number" &&
+    typeof lng === "number" &&
+    !isNaN(lat) &&
+    !isNaN(lng) &&
+    !(lat === 0 && lng === 0); // exclude 0,0 default
 
-  const oName = shipment?.origin?.name || shipment?.from || "Origin";
-  const cName = shipment?.currentLocation?.name || "Current Location";
-  const dName = shipment?.destination?.name || shipment?.to || "Destination";
+  // Handle both old (string) and new (object) formats
+  const getLoc = (loc) => {
+    if (!loc) return { name: "", lat: null, lng: null };
+    if (typeof loc === "object")
+      return { name: loc.name || "", lat: loc.latitude, lng: loc.longitude };
+    return { name: loc, lat: null, lng: null }; // old string format
+  };
+
+  const origin = getLoc(shipment?.origin);
+  const current = getLoc(shipment?.currentLocation);
+  const dest = getLoc(shipment?.destination);
+
+  const hasOrigin = isValidCoord(origin.lat, origin.lng);
+  const hasCurrent = isValidCoord(current.lat, current.lng);
+  const hasDest = isValidCoord(dest.lat, dest.lng);
 
   const positions = [];
-  if (oLat != null && oLng != null) positions.push([oLat, oLng]);
-  if (cLat != null && cLng != null) positions.push([cLat, cLng]);
-  if (dLat != null && dLng != null) positions.push([dLat, dLng]);
+  if (hasOrigin) positions.push([origin.lat, origin.lng]);
+  if (hasCurrent) positions.push([current.lat, current.lng]);
+  if (hasDest) positions.push([dest.lat, dest.lng]);
 
-  const center =
-    cLat != null && cLng != null
-      ? [cLat, cLng]
-      : oLat != null && oLng != null
-        ? [oLat, oLng]
-        : [6.5244, 3.3792];
+  const center = hasCurrent
+    ? [current.lat, current.lng]
+    : hasOrigin
+      ? [origin.lat, origin.lng]
+      : hasDest
+        ? [dest.lat, dest.lng]
+        : [20, 0];
+
+  const hasAny = positions.length > 0;
 
   return (
     <MapContainer
       center={center}
-      zoom={4}
+      zoom={hasAny ? 4 : 2}
       scrollWheelZoom={true}
       style={{ height: "100%", width: "100%", minHeight: "320px" }}
     >
@@ -84,6 +99,7 @@ export default function ShipmentMapInner({ shipment }) {
         attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a>'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
+
       {positions.length >= 2 && (
         <Polyline
           positions={positions}
@@ -93,45 +109,43 @@ export default function ShipmentMapInner({ shipment }) {
           opacity={0.7}
         />
       )}
-      {oLat != null && oLng != null && (
-        <Marker position={[oLat, oLng]} icon={originIcon}>
+
+      {hasOrigin && (
+        <Marker position={[origin.lat, origin.lng]} icon={originIcon}>
           <Popup>
             <strong>Origin</strong>
             <br />
-            {oName}
+            {origin.name || shipment?.from}
           </Popup>
         </Marker>
       )}
-      {cLat != null && cLng != null && (
-        <Marker position={[cLat, cLng]} icon={currentIcon}>
+      {hasCurrent && (
+        <Marker position={[current.lat, current.lng]} icon={currentIcon}>
           <Popup>
-            <strong>Current Location</strong>
+            <strong>Current</strong>
             <br />
-            {cName}
+            {current.name}
             <br />
             Status: {shipment?.status}
           </Popup>
         </Marker>
       )}
-      {dLat != null && dLng != null && (
-        <Marker position={[dLat, dLng]} icon={destIcon}>
+      {hasDest && (
+        <Marker position={[dest.lat, dest.lng]} icon={destIcon}>
           <Popup>
             <strong>Destination</strong>
             <br />
-            {dName}
+            {dest.name || shipment?.to}
           </Popup>
         </Marker>
       )}
-      {positions.length === 0 && (
-        <Marker position={center}>
-          <Popup>
-            Shipment {shipment?.shipmentId}
-            <br />
-            Status: {shipment?.status}
-            <br />
-            <em>No coordinates</em>
-          </Popup>
-        </Marker>
+
+      {!hasAny && (
+        <div className="absolute inset-0 z-[1000] flex items-center justify-center bg-white/80 pointer-events-none">
+          <p className="text-gray-500 text-sm font-medium">
+            No location coordinates set
+          </p>
+        </div>
       )}
     </MapContainer>
   );

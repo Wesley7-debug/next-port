@@ -118,7 +118,11 @@ export default function AddShipmentModal({ onClose, onAdd }) {
     if (coords) {
       setN(parent, "latitude", coords.latitude);
       setN(parent, "longitude", coords.longitude);
+    } else if (value.trim() === "") {
+      setN(parent, "latitude", null);
+      setN(parent, "longitude", null);
     }
+    // If value has text but no match, keep existing coords (user may have entered manually)
   };
 
   const copyId = () => {
